@@ -6,16 +6,33 @@
 //
 
 import SwiftUI
+import WebKit
 
 struct ContentView: View {
+    
+    @State private var showWebView = false
+    private let urlString: String = "https://www.baidu.com"
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            Color.black
+                .ignoresSafeArea()
+            
+            WebView(url: URL(string: urlString)!)
         }
-        .padding()
+    }
+}
+
+struct WebView: UIViewRepresentable {
+    var url: URL
+    
+    func makeUIView(context: Context) -> WKWebView {
+        return WKWebView()
+    }
+    
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+        let request = URLRequest(url: url)
+        uiView.load(request)
     }
 }
 
