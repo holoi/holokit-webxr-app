@@ -11,6 +11,7 @@
 		4B1E35602A7A21A9003EBC46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1E355F2A7A21A9003EBC46 /* ContentView.swift */; };
 		4B1E35622A7A21AB003EBC46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B1E35612A7A21AB003EBC46 /* Assets.xcassets */; };
 		4B1E35652A7A21AB003EBC46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B1E35642A7A21AB003EBC46 /* Preview Assets.xcassets */; };
+		4B8A782D2A7A410400EB4501 /* ARManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A782C2A7A410400EB4501 /* ARManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		4B1E355F2A7A21A9003EBC46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4B1E35612A7A21AB003EBC46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B1E35642A7A21AB003EBC46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4B8A782C2A7A410400EB4501 /* ARManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				4B1E355D2A7A21A9003EBC46 /* HoloKitWebXRApp.swift */,
 				4B1E355F2A7A21A9003EBC46 /* ContentView.swift */,
+				4B8A782C2A7A410400EB4501 /* ARManager.swift */,
 				4B1E35612A7A21AB003EBC46 /* Assets.xcassets */,
 				4B1E35632A7A21AB003EBC46 /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B1E35602A7A21A9003EBC46 /* ContentView.swift in Sources */,
+				4B8A782D2A7A410400EB4501 /* ARManager.swift in Sources */,
 				4B1E355E2A7A21A9003EBC46 /* HoloKitWebXRApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +279,7 @@
 				DEVELOPMENT_TEAM = KR9H35SQQ9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "For AR experiences.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +309,7 @@
 				DEVELOPMENT_TEAM = KR9H35SQQ9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "For AR experiences.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
