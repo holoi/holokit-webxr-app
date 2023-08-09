@@ -22,7 +22,14 @@ struct WebView: UIViewRepresentable {
         webConfiguration.mediaTypesRequiringUserActionForPlayback = []
         
         // Inject webxr-polyfill.js
-        if let path = Bundle.main.path(forResource: "webxr-polyfill", ofType: "js"),
+//        if let path = Bundle.main.path(forResource: "webxr-polyfill", ofType: "js"),
+//           let webxrPolyfillScript = try? String(contentsOfFile: path) {
+//            let userScript = WKUserScript(source: webxrPolyfillScript, injectionTime: .atDocumentStart, forMainFrameOnly: true)
+//            webConfiguration.userContentController.addUserScript(userScript)
+//        }
+
+        
+        if let path = Bundle.main.path(forResource: "webxr2.0", ofType: "js"),
            let webxrPolyfillScript = try? String(contentsOfFile: path) {
             let userScript = WKUserScript(source: webxrPolyfillScript, injectionTime: .atDocumentStart, forMainFrameOnly: true)
             webConfiguration.userContentController.addUserScript(userScript)

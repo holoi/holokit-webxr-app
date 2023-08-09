@@ -14,6 +14,8 @@
 		4B4BE6422A81E6D100D41300 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BE6412A81E6D100D41300 /* WebView.swift */; };
 		4B4BE6442A81E83900D41300 /* webxr-polyfill.js in Resources */ = {isa = PBXBuildFile; fileRef = 4B4BE6432A81E83900D41300 /* webxr-polyfill.js */; };
 		4B4BE6452A81F77500D41300 /* webxr-polyfill.js in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BE6432A81E83900D41300 /* webxr-polyfill.js */; };
+		4B7E1F5E2A838F38002A4EA8 /* webxr2.0.js in Resources */ = {isa = PBXBuildFile; fileRef = 4B7E1F5D2A838F38002A4EA8 /* webxr2.0.js */; };
+		4B7E1F5F2A838F3E002A4EA8 /* webxr2.0.js in Sources */ = {isa = PBXBuildFile; fileRef = 4B7E1F5D2A838F38002A4EA8 /* webxr2.0.js */; };
 		4B8A782D2A7A410400EB4501 /* ARManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A782C2A7A410400EB4501 /* ARManager.swift */; };
 		4BB199F42A83334400497037 /* jstest.js in Resources */ = {isa = PBXBuildFile; fileRef = 4BB199F32A83334400497037 /* jstest.js */; };
 		4BB199F52A83335F00497037 /* jstest.js in Sources */ = {isa = PBXBuildFile; fileRef = 4BB199F32A83334400497037 /* jstest.js */; };
@@ -29,6 +31,7 @@
 		4B1E35642A7A21AB003EBC46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4B4BE6412A81E6D100D41300 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		4B4BE6432A81E83900D41300 /* webxr-polyfill.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "webxr-polyfill.js"; sourceTree = "<group>"; };
+		4B7E1F5D2A838F38002A4EA8 /* webxr2.0.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = webxr2.0.js; sourceTree = "<group>"; };
 		4B8A782C2A7A410400EB4501 /* ARManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARManager.swift; sourceTree = "<group>"; };
 		4BB199F32A83334400497037 /* jstest.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jstest.js; sourceTree = "<group>"; };
 		4BB199F62A83368000497037 /* holokit-ar.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "holokit-ar.js"; sourceTree = "<group>"; };
@@ -69,6 +72,7 @@
 				4B4BE6412A81E6D100D41300 /* WebView.swift */,
 				4B8A782C2A7A410400EB4501 /* ARManager.swift */,
 				4B4BE6432A81E83900D41300 /* webxr-polyfill.js */,
+				4B7E1F5D2A838F38002A4EA8 /* webxr2.0.js */,
 				4BB199F62A83368000497037 /* holokit-ar.js */,
 				4BB199F32A83334400497037 /* jstest.js */,
 				4B1E35612A7A21AB003EBC46 /* Assets.xcassets */,
@@ -147,6 +151,7 @@
 				4BB199F72A83368000497037 /* holokit-ar.js in Resources */,
 				4BB199F42A83334400497037 /* jstest.js in Resources */,
 				4B1E35622A7A21AB003EBC46 /* Assets.xcassets in Resources */,
+				4B7E1F5E2A838F38002A4EA8 /* webxr2.0.js in Resources */,
 				4B4BE6442A81E83900D41300 /* webxr-polyfill.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,6 +169,7 @@
 				4B1E355E2A7A21A9003EBC46 /* HoloKitWebXRApp.swift in Sources */,
 				4B4BE6452A81F77500D41300 /* webxr-polyfill.js in Sources */,
 				4BB199F82A83368D00497037 /* holokit-ar.js in Sources */,
+				4B7E1F5F2A838F3E002A4EA8 /* webxr2.0.js in Sources */,
 				4BB199F52A83335F00497037 /* jstest.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
