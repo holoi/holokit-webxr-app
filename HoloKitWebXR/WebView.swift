@@ -21,11 +21,27 @@ struct WebView: UIViewRepresentable {
         webConfiguration.allowsInlineMediaPlayback = true
         webConfiguration.mediaTypesRequiringUserActionForPlayback = []
         
+        // Inject webxr-polyfill.js
+        if let path = Bundle.main.path(forResource: "webxr-polyfill", ofType: "js"),
+           let webxrPolyfillScript = try? String(contentsOfFile: path) {
+            let userScript = WKUserScript(source: webxrPolyfillScript, injectionTime: .atDocumentStart, forMainFrameOnly: true)
+            webConfiguration.userContentController.addUserScript(userScript)
+        }
+        
+        // Inject holokit-ar.js
+        if let path = Bundle.main.path(forResource: "holokit-ar", ofType: "js"),
+           let holokitArScript = try? String(contentsOfFile: path) {
+            let userScript = WKUserScript(source: holokitArScript, injectionTime: .atDocumentStart, forMainFrameOnly: true)
+            webConfiguration.userContentController.addUserScript(userScript)
+        }
+        
+        webConfiguration.userContentController.add(Coordinator(self), name: "logHandler")
+        
         let webView = WKWebView(frame: .zero, configuration: webConfiguration)
-        webView.navigationDelegate = context.coordinator
         webView.allowsBackForwardNavigationGestures = true
         webView.isMultipleTouchEnabled = true
         webView.scrollView.contentInsetAdjustmentBehavior = .never
+        webView.navigationDelegate = context.coordinator
         
         return webView
     }
@@ -38,24 +54,17 @@ struct WebView: UIViewRepresentable {
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
-    
-    class Coordinator: NSObject, WKNavigationDelegate {
+
+    class Coordinator: NSObject, WKNavigationDelegate, WKScriptMessageHandler {
         var parent: WebView
         
         init(_ parent: WebView) {
             self.parent = parent
         }
         
-        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-            // Load and inject the JavaScript code when the web page finishes loading
-            if let scriptContent = try? String(contentsOf: Bundle.main.url(forResource: "webxr", withExtension: ".js")!) {
-                webView.evaluateJavaScript(scriptContent) { (result, error) in
-                    if let error = error {
-                        print("Failed to inject JavaScript with error: \(error.localizedDescription)")
-                    } else {
-                        print("Successfully injected JavaScript")
-                    }
-                }
+        func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+            if message.name == "logHandler", let logMessage = message.body as? String {
+                print(logMessage)
             }
         }
     }
