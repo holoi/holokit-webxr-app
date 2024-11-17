@@ -1,17 +1,13 @@
-//
-//  ContentView.swift
-//  HoloKitWebXR
-//
-//  Created by Yuchen Zhang on 2023/8/2.
-//
+// SPDX-FileCopyrightText: Copyright 2024 Reality Design Lab <dev@reality.design>
+// SPDX-FileContributor: Yuchen Zhang <yuchen@reality.design>
+// SPDX-License-Identifier: MIT
 
 import SwiftUI
-
 
 struct ContentView: View {
     
     @State private var showWebView = false
-    private let urlString: String = "https://immersive-web.github.io/webxr-samples/immersive-ar-session.html"
+    private let urlString: String = "https://toji.github.io/webxr-particles/"
     
     var body: some View {
         ZStack {

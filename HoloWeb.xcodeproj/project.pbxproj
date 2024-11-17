@@ -7,25 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4B1E355E2A7A21A9003EBC46 /* HoloKitWebXRApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1E355D2A7A21A9003EBC46 /* HoloKitWebXRApp.swift */; };
+		4B1E355E2A7A21A9003EBC46 /* HoloWebApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1E355D2A7A21A9003EBC46 /* HoloWebApp.swift */; };
 		4B1E35602A7A21A9003EBC46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1E355F2A7A21A9003EBC46 /* ContentView.swift */; };
 		4B1E35622A7A21AB003EBC46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B1E35612A7A21AB003EBC46 /* Assets.xcassets */; };
 		4B1E35652A7A21AB003EBC46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B1E35642A7A21AB003EBC46 /* Preview Assets.xcassets */; };
 		4B4BE6422A81E6D100D41300 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BE6412A81E6D100D41300 /* WebView.swift */; };
 		4B4BE6442A81E83900D41300 /* webxr-polyfill.js in Resources */ = {isa = PBXBuildFile; fileRef = 4B4BE6432A81E83900D41300 /* webxr-polyfill.js */; };
-		4B4BE6452A81F77500D41300 /* webxr-polyfill.js in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BE6432A81E83900D41300 /* webxr-polyfill.js */; };
 		4B7E1F5E2A838F38002A4EA8 /* webxr2.0.js in Resources */ = {isa = PBXBuildFile; fileRef = 4B7E1F5D2A838F38002A4EA8 /* webxr2.0.js */; };
-		4B7E1F5F2A838F3E002A4EA8 /* webxr2.0.js in Sources */ = {isa = PBXBuildFile; fileRef = 4B7E1F5D2A838F38002A4EA8 /* webxr2.0.js */; };
 		4B8A782D2A7A410400EB4501 /* ARManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A782C2A7A410400EB4501 /* ARManager.swift */; };
 		4BB199F42A83334400497037 /* jstest.js in Resources */ = {isa = PBXBuildFile; fileRef = 4BB199F32A83334400497037 /* jstest.js */; };
-		4BB199F52A83335F00497037 /* jstest.js in Sources */ = {isa = PBXBuildFile; fileRef = 4BB199F32A83334400497037 /* jstest.js */; };
 		4BB199F72A83368000497037 /* holokit-ar.js in Resources */ = {isa = PBXBuildFile; fileRef = 4BB199F62A83368000497037 /* holokit-ar.js */; };
-		4BB199F82A83368D00497037 /* holokit-ar.js in Sources */ = {isa = PBXBuildFile; fileRef = 4BB199F62A83368000497037 /* holokit-ar.js */; };
+		9602D0902CE974A200F2820D /* HoloWebClipApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9602D08A2CE974A200F2820D /* HoloWebClipApp.swift */; };
+		9602D0912CE97F2800F2820D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1E355F2A7A21A9003EBC46 /* ContentView.swift */; };
+		9602D0922CE97F2800F2820D /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BE6412A81E6D100D41300 /* WebView.swift */; };
+		9602D0932CE97F2800F2820D /* ARManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8A782C2A7A410400EB4501 /* ARManager.swift */; };
+		9602D0982CE97F3900F2820D /* webxr-polyfill.js in Resources */ = {isa = PBXBuildFile; fileRef = 4B4BE6432A81E83900D41300 /* webxr-polyfill.js */; };
+		9602D0992CE97F3900F2820D /* webxr2.0.js in Resources */ = {isa = PBXBuildFile; fileRef = 4B7E1F5D2A838F38002A4EA8 /* webxr2.0.js */; };
+		9602D09A2CE97F3900F2820D /* holokit-ar.js in Resources */ = {isa = PBXBuildFile; fileRef = 4BB199F62A83368000497037 /* holokit-ar.js */; };
+		9602D09B2CE97F3900F2820D /* jstest.js in Resources */ = {isa = PBXBuildFile; fileRef = 4BB199F32A83334400497037 /* jstest.js */; };
+		9602D09C2CE97F4600F2820D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B1E35612A7A21AB003EBC46 /* Assets.xcassets */; };
+		9602D09D2CE97F4600F2820D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B1E35642A7A21AB003EBC46 /* Preview Assets.xcassets */; };
+		96A565712CE9726B0028AD43 /* HoloWebClip.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 96A5654C2CE972690028AD43 /* HoloWebClip.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		96A5656F2CE9726B0028AD43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B1E35522A7A21A9003EBC46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96A5654B2CE972690028AD43;
+			remoteInfo = HoloWebClip;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		96A565762CE9726B0028AD43 /* Embed App Clips */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
+			dstSubfolderSpec = 16;
+			files = (
+				96A565712CE9726B0028AD43 /* HoloWebClip.app in Embed App Clips */,
+			);
+			name = "Embed App Clips";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		4B1E355A2A7A21A9003EBC46 /* HoloKitWebXR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoloKitWebXR.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B1E355D2A7A21A9003EBC46 /* HoloKitWebXRApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoloKitWebXRApp.swift; sourceTree = "<group>"; };
+		4B1E355A2A7A21A9003EBC46 /* HoloWeb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoloWeb.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B1E355D2A7A21A9003EBC46 /* HoloWebApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoloWebApp.swift; sourceTree = "<group>"; };
 		4B1E355F2A7A21A9003EBC46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4B1E35612A7A21AB003EBC46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B1E35642A7A21AB003EBC46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -35,10 +66,21 @@
 		4B8A782C2A7A410400EB4501 /* ARManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARManager.swift; sourceTree = "<group>"; };
 		4BB199F32A83334400497037 /* jstest.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = jstest.js; sourceTree = "<group>"; };
 		4BB199F62A83368000497037 /* holokit-ar.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "holokit-ar.js"; sourceTree = "<group>"; };
+		9602D0892CE974A200F2820D /* HoloWebClip.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HoloWebClip.entitlements; sourceTree = "<group>"; };
+		9602D08A2CE974A200F2820D /* HoloWebClipApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoloWebClipApp.swift; sourceTree = "<group>"; };
+		9602D08B2CE974A200F2820D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96A5654C2CE972690028AD43 /* HoloWebClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoloWebClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4B1E35572A7A21A9003EBC46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96A565492CE972690028AD43 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -51,7 +93,7 @@
 		4B1E35512A7A21A9003EBC46 = {
 			isa = PBXGroup;
 			children = (
-				4B1E355C2A7A21A9003EBC46 /* HoloKitWebXR */,
+				4B1E355C2A7A21A9003EBC46 /* HoloWeb */,
 				4B1E355B2A7A21A9003EBC46 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,26 +101,30 @@
 		4B1E355B2A7A21A9003EBC46 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4B1E355A2A7A21A9003EBC46 /* HoloKitWebXR.app */,
+				4B1E355A2A7A21A9003EBC46 /* HoloWeb.app */,
+				96A5654C2CE972690028AD43 /* HoloWebClip.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4B1E355C2A7A21A9003EBC46 /* HoloKitWebXR */ = {
+		4B1E355C2A7A21A9003EBC46 /* HoloWeb */ = {
 			isa = PBXGroup;
 			children = (
-				4B1E355D2A7A21A9003EBC46 /* HoloKitWebXRApp.swift */,
+				4B1E355D2A7A21A9003EBC46 /* HoloWebApp.swift */,
 				4B1E355F2A7A21A9003EBC46 /* ContentView.swift */,
 				4B4BE6412A81E6D100D41300 /* WebView.swift */,
 				4B8A782C2A7A410400EB4501 /* ARManager.swift */,
+				9602D08A2CE974A200F2820D /* HoloWebClipApp.swift */,
+				9602D0892CE974A200F2820D /* HoloWebClip.entitlements */,
 				4B4BE6432A81E83900D41300 /* webxr-polyfill.js */,
 				4B7E1F5D2A838F38002A4EA8 /* webxr2.0.js */,
 				4BB199F62A83368000497037 /* holokit-ar.js */,
 				4BB199F32A83334400497037 /* jstest.js */,
+				9602D08B2CE974A200F2820D /* Info.plist */,
 				4B1E35612A7A21AB003EBC46 /* Assets.xcassets */,
 				4B1E35632A7A21AB003EBC46 /* Preview Content */,
 			);
-			path = HoloKitWebXR;
+			path = HoloWeb;
 			sourceTree = "<group>";
 		};
 		4B1E35632A7A21AB003EBC46 /* Preview Content */ = {
@@ -92,22 +138,43 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4B1E35592A7A21A9003EBC46 /* HoloKitWebXR */ = {
+		4B1E35592A7A21A9003EBC46 /* HoloWeb */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4B1E35682A7A21AB003EBC46 /* Build configuration list for PBXNativeTarget "HoloKitWebXR" */;
+			buildConfigurationList = 4B1E35682A7A21AB003EBC46 /* Build configuration list for PBXNativeTarget "HoloWeb" */;
 			buildPhases = (
 				4B1E35562A7A21A9003EBC46 /* Sources */,
 				4B1E35572A7A21A9003EBC46 /* Frameworks */,
 				4B1E35582A7A21A9003EBC46 /* Resources */,
+				96A565762CE9726B0028AD43 /* Embed App Clips */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96A565702CE9726B0028AD43 /* PBXTargetDependency */,
+			);
+			name = HoloWeb;
+			productName = HoloKitWebXR;
+			productReference = 4B1E355A2A7A21A9003EBC46 /* HoloWeb.app */;
+			productType = "com.apple.product-type.application";
+		};
+		96A5654B2CE972690028AD43 /* HoloWebClip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96A565732CE9726B0028AD43 /* Build configuration list for PBXNativeTarget "HoloWebClip" */;
+			buildPhases = (
+				96A565482CE972690028AD43 /* Sources */,
+				96A565492CE972690028AD43 /* Frameworks */,
+				96A5654A2CE972690028AD43 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = HoloKitWebXR;
-			productName = HoloKitWebXR;
-			productReference = 4B1E355A2A7A21A9003EBC46 /* HoloKitWebXR.app */;
-			productType = "com.apple.product-type.application";
+			name = HoloWebClip;
+			packageProductDependencies = (
+			);
+			productName = HoloWebClip;
+			productReference = 96A5654C2CE972690028AD43 /* HoloWebClip.app */;
+			productType = "com.apple.product-type.application.on-demand-install-capable";
 		};
 /* End PBXNativeTarget section */
 
@@ -116,15 +183,18 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					4B1E35592A7A21A9003EBC46 = {
 						CreatedOnToolsVersion = 15.0;
 					};
+					96A5654B2CE972690028AD43 = {
+						CreatedOnToolsVersion = 16.1;
+					};
 				};
 			};
-			buildConfigurationList = 4B1E35552A7A21A9003EBC46 /* Build configuration list for PBXProject "HoloKitWebXR" */;
+			buildConfigurationList = 4B1E35552A7A21A9003EBC46 /* Build configuration list for PBXProject "HoloWeb" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -137,7 +207,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4B1E35592A7A21A9003EBC46 /* HoloKitWebXR */,
+				4B1E35592A7A21A9003EBC46 /* HoloWeb */,
+				96A5654B2CE972690028AD43 /* HoloWebClip */,
 			);
 		};
 /* End PBXProject section */
@@ -156,6 +227,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		96A5654A2CE972690028AD43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9602D09C2CE97F4600F2820D /* Assets.xcassets in Resources */,
+				9602D09D2CE97F4600F2820D /* Preview Assets.xcassets in Resources */,
+				9602D0982CE97F3900F2820D /* webxr-polyfill.js in Resources */,
+				9602D0992CE97F3900F2820D /* webxr2.0.js in Resources */,
+				9602D09A2CE97F3900F2820D /* holokit-ar.js in Resources */,
+				9602D09B2CE97F3900F2820D /* jstest.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -166,15 +250,30 @@
 				4B1E35602A7A21A9003EBC46 /* ContentView.swift in Sources */,
 				4B4BE6422A81E6D100D41300 /* WebView.swift in Sources */,
 				4B8A782D2A7A410400EB4501 /* ARManager.swift in Sources */,
-				4B1E355E2A7A21A9003EBC46 /* HoloKitWebXRApp.swift in Sources */,
-				4B4BE6452A81F77500D41300 /* webxr-polyfill.js in Sources */,
-				4BB199F82A83368D00497037 /* holokit-ar.js in Sources */,
-				4B7E1F5F2A838F3E002A4EA8 /* webxr2.0.js in Sources */,
-				4BB199F52A83335F00497037 /* jstest.js in Sources */,
+				4B1E355E2A7A21A9003EBC46 /* HoloWebApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96A565482CE972690028AD43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9602D0912CE97F2800F2820D /* ContentView.swift in Sources */,
+				9602D0922CE97F2800F2820D /* WebView.swift in Sources */,
+				9602D0932CE97F2800F2820D /* ARManager.swift in Sources */,
+				9602D0902CE974A200F2820D /* HoloWebClipApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96A565702CE9726B0028AD43 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96A5654B2CE972690028AD43 /* HoloWebClip */;
+			targetProxy = 96A5656F2CE9726B0028AD43 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4B1E35662A7A21AB003EBC46 /* Debug */ = {
@@ -184,7 +283,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++23";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -229,7 +328,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -247,7 +346,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++23";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -286,7 +385,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -303,7 +402,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HoloKitWebXR/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HoloWeb/Preview Content\"";
 				DEVELOPMENT_TEAM = KR9H35SQQ9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -313,15 +412,16 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.holoi.HoloKitWebXR;
+				PRODUCT_BUNDLE_IDENTIFIER = org.realitydeslab.holoweb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -333,7 +433,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"HoloKitWebXR/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"HoloWeb/Preview Content\"";
 				DEVELOPMENT_TEAM = KR9H35SQQ9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -343,15 +443,84 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.holoi.HoloKitWebXR;
+				PRODUCT_BUNDLE_IDENTIFIER = org.realitydeslab.holoweb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		96A565742CE9726B0028AD43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = HoloWeb/HoloWebClip.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HoloWeb/Preview Content\"";
+				DEVELOPMENT_TEAM = KR9H35SQQ9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HoloWeb/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HoloWeb;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.realitydeslab.holoweb.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		96A565752CE9726B0028AD43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = HoloWeb/HoloWebClip.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"HoloWeb/Preview Content\"";
+				DEVELOPMENT_TEAM = KR9H35SQQ9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HoloWeb/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HoloWeb;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.realitydeslab.holoweb.Clip;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -359,7 +528,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4B1E35552A7A21A9003EBC46 /* Build configuration list for PBXProject "HoloKitWebXR" */ = {
+		4B1E35552A7A21A9003EBC46 /* Build configuration list for PBXProject "HoloWeb" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4B1E35662A7A21AB003EBC46 /* Debug */,
@@ -368,11 +537,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4B1E35682A7A21AB003EBC46 /* Build configuration list for PBXNativeTarget "HoloKitWebXR" */ = {
+		4B1E35682A7A21AB003EBC46 /* Build configuration list for PBXNativeTarget "HoloWeb" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4B1E35692A7A21AB003EBC46 /* Debug */,
 				4B1E356A2A7A21AB003EBC46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96A565732CE9726B0028AD43 /* Build configuration list for PBXNativeTarget "HoloWebClip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96A565742CE9726B0028AD43 /* Debug */,
+				96A565752CE9726B0028AD43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

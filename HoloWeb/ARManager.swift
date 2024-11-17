@@ -1,14 +1,11 @@
-//
-//  ARManager.swift
-//  HoloKitWebXR
-//
-//  Created by Yuchen Zhang on 2023/8/2.
-//
+// SPDX-FileCopyrightText: Copyright 2024 Reality Design Lab <dev@reality.design>
+// SPDX-FileContributor: Yuchen Zhang <yuchen@reality.design>
+// SPDX-License-Identifier: MIT
 
 import ARKit
 
 class ARManager {
-    static let shared = ARManager()
+    @MainActor static let shared = ARManager()
     private init() {}
     
     func StartARSession() {

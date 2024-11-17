@@ -1,14 +1,14 @@
 //
-//  HoloKitWebXRApp.swift
-//  HoloKitWebXR
+//  HoloWebClipApp.swift
+//  HoloWebClip
 //
-//  Created by Yuchen Zhang on 2023/8/2.
+//  Created by Botao Hu on 11/17/24.
 //
 
 import SwiftUI
 
 @main
-struct HoloKitWebXRApp: App {
+struct HoloWebClipApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()

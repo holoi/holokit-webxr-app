@@ -1,9 +1,6 @@
-//
-//  WebView.swift
-//  HoloKitWebXR
-//
-//  Created by Yuchen Zhang on 2023/8/8.
-//
+// SPDX-FileCopyrightText: Copyright 2024 Reality Design Lab <dev@reality.design>
+// SPDX-FileContributor: Yuchen Zhang <yuchen@reality.design>
+// SPDX-License-Identifier: MIT
 
 import SwiftUI
 import WebKit
@@ -30,14 +27,14 @@ struct WebView: UIViewRepresentable {
 
         
         if let path = Bundle.main.path(forResource: "webxr2.0", ofType: "js"),
-           let webxrPolyfillScript = try? String(contentsOfFile: path) {
+           let webxrPolyfillScript = try? String(contentsOfFile: path, encoding: .utf8) {
             let userScript = WKUserScript(source: webxrPolyfillScript, injectionTime: .atDocumentStart, forMainFrameOnly: true)
             webConfiguration.userContentController.addUserScript(userScript)
         }
         
         // Inject holokit-ar.js
         if let path = Bundle.main.path(forResource: "holokit-ar", ofType: "js"),
-           let holokitArScript = try? String(contentsOfFile: path) {
+           let holokitArScript = try? String(contentsOfFile: path, encoding: .utf8) {
             let userScript = WKUserScript(source: holokitArScript, injectionTime: .atDocumentStart, forMainFrameOnly: true)
             webConfiguration.userContentController.addUserScript(userScript)
         }
