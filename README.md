@@ -2,12 +2,10 @@
 
 ## WIP
 
-This repo is work-in-progress. 
-We also provide bounty for you. 
+Alert: This repository is a work in progress and is not yet functional.
 
-If you like to work with us on this project, please go to apply for a WebXR+iOS Engineer position (it's a contract based work)
-[Collab-with-us](https://reality.design/collab-with-us)
-* [Reality Design Lab is looking for WebXR iOS Engineer](https://realitydeslab.notion.site/Reality-Design-Lab-is-looking-for-WebXR-iOS-Engineer-1405c6192b7e8057ba5bf73bf375e3ff?pvs=4)
+The author, [Botao Amber Hu](https://botao.hu/), is currently occupied with PhD applications and unable to continue development at this time. We're seeking assistance with this project. If you're interested in collaborating, please apply for our [WebXR+iOS Engineer position](https://www.notion.so/Reality-Design-Lab-is-looking-for-WebXR-iOS-Engineer-1405c6192b7e8057ba5bf73bf375e3ff?pvs=21). This is a bounty-based opportunity -- complete the project to earn the reward ($10,000)!
+[Collaborate with us](https://reality.design/collab-with-us)
 
 ## Description
 
