@@ -25,4 +25,7 @@ While Safari on visionOS 2 (Apple Vision Pro) supports WebXR for VR experiences,
 
 For iOS, WebXR support is primarily available through [Mozilla's WebXR Viewer app](https://github.com/mozilla-mobile/webxr-ios/), which hasn't been updated in several years.
 
-## Motivation
+## Reference
+
+https://github.com/mozilla-mobile/firefox-ios/tree/webxr
+
