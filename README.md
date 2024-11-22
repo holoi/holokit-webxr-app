@@ -25,13 +25,17 @@ While Safari on visionOS 2 (Apple Vision Pro) supports WebXR for VR experiences,
 
 For iOS, WebXR support is primarily available through [Mozilla's WebXR Viewer app](https://github.com/mozilla-mobile/webxr-ios/), which hasn't been updated in several years.
 
-## Reference
 
 ## Use Case
 
-[Artistic experiences](https://immersive-web.github.io/webxr/explainer.html#setting-up-an-xrwebgllayer)
-AR provides an interesting canvas for artists looking to explore the possibilities of a new medium. Shorter, abstract, and highly experimental experiences are often poor fits for an app-store model, where the perceived overhead of downloading and installing a native executable may be disproportionate to the content delivered. The web’s transient nature makes these types of applications more appealing, since they provide a frictionless way of viewing the experience. Artists can also more easily attract people to the content and target the widest range of devices and platforms with a single code base.
+### [Experimental & Artistic experiences](https://immersive-web.github.io/webxr/explainer.html#artistic-experiences)
+AR transforms reality into an infinite canvas for artistic exploration. Short, abstract, and experimental pieces often clash with the app-store model, where downloading and installing a native app feels cumbersome for brief experiences. The web's lightweight nature makes these works more accessible, providing viewers with a seamless experience. Artists gain broader audience reach and can deploy to multiple devices and platforms using a single codebase.
 
+### Research & Education
+For research and mixed reality design education, the app store review process is very time-consuming. Students need app store management accounts and struggle to master this lengthy process. It's also difficult for their audiences to try out the content. Instead, we want researchers and students to focus on creation itself.
 
+## Reference Implementation
+
+WebXR Viewer from Mozilla 
 https://github.com/mozilla-mobile/firefox-ios/tree/webxr
 
