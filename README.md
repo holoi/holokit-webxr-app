@@ -27,5 +27,11 @@ For iOS, WebXR support is primarily available through [Mozilla's WebXR Viewer ap
 
 ## Reference
 
+## Use Case
+
+[Artistic experiences](https://immersive-web.github.io/webxr/explainer.html#setting-up-an-xrwebgllayer)
+AR provides an interesting canvas for artists looking to explore the possibilities of a new medium. Shorter, abstract, and highly experimental experiences are often poor fits for an app-store model, where the perceived overhead of downloading and installing a native executable may be disproportionate to the content delivered. The web’s transient nature makes these types of applications more appealing, since they provide a frictionless way of viewing the experience. Artists can also more easily attract people to the content and target the widest range of devices and platforms with a single code base.
+
+
 https://github.com/mozilla-mobile/firefox-ios/tree/webxr
 
