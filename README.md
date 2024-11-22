@@ -36,6 +36,7 @@ For research and mixed reality design education, the app store review process is
 
 ## Reference Implementation
 
-WebXR Viewer from Mozilla 
-https://github.com/mozilla-mobile/firefox-ios/tree/webxr
+- [WebXR Device API Explained](https://immersive-web.github.io/webxr/explainer.html#setting-up-an-xrwebgllayer)
+
+- [Github of WebXR Viewer from Mozilla](https://github.com/mozilla-mobile/firefox-ios/tree/webxr)
 
