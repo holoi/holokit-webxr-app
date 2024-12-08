@@ -13,6 +13,7 @@ struct WebView: UIViewRepresentable {
     private init() {}
 
     func makeUIView(context: Context) -> UIViewType {
+        let appName = Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String ?? ""
         
         let webPrefs = WKWebpagePreferences()
         webPrefs.allowsContentJavaScript = true
@@ -21,6 +22,8 @@ struct WebView: UIViewRepresentable {
         webConfiguration.defaultWebpagePreferences = webPrefs
         webConfiguration.allowsInlineMediaPlayback = true
         webConfiguration.mediaTypesRequiringUserActionForPlayback = []
+        webConfiguration.preferences.isElementFullscreenEnabled = true
+        webConfiguration.applicationNameForUserAgent = "Mobile/\(appName)"
         
         // Inject webxr-polyfill.js
 //        if let path = Bundle.main.path(forResource: "webxr-polyfill", ofType: "js"),

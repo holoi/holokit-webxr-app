@@ -7,12 +7,13 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var webView = WebView.shared
-
+    
     var body: some View {
         
         VStack() {
             webView
-                .edgesIgnoringSafeArea(webView.viewModel.isFullScreen ? .all : .horizontal)
+                .ignoresSafeArea(webView.viewModel.isFullScreen ? .all : .keyboard)
+                .statusBarHidden(webView.viewModel.isFullScreen)
             
             if !webView.viewModel.isFullScreen {
                 HStack {
@@ -21,10 +22,10 @@ struct ContentView: View {
                     }) {
                         Image(systemName: "info.circle")
                     }
-
+                    
                     TextField("Enter address", text: $webView.viewModel.urlString)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-
+                    
                     Button(action: {
                         webView.load()
                     }) {
@@ -48,7 +49,7 @@ struct ContentView: View {
                         Image(systemName: "chevron.right")
                     }
                     .disabled(!webView.viewModel.canGoForward)
-
+                    
                     Button(action: {
                         // TODO: Share action
                     }) {
@@ -74,6 +75,7 @@ struct ContentView: View {
         
     } /* body */
 } /* ContentView */
+
 
 #Preview {
     ContentView()
