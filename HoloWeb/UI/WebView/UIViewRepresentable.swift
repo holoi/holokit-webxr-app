@@ -1,14 +1,18 @@
-// SPDX-FileCopyrightText: Copyright 2024 Reality Design Lab <dev@reality.design>
-// SPDX-FileContributor: Yuchen Zhang <yuchen@reality.design>
-// SPDX-License-Identifier: MIT
+//
+//  UIViewRepresentable.swift
+//  HoloWeb
+//
+//  Created by Alex on 08/12/2024.
+//
 
 import SwiftUI
 import WebKit
 
-struct WebView: UIViewRepresentable {
-    var url: URL
-    
-    func makeUIView(context: Context) -> WKWebView {
+extension WebView: UIViewRepresentable {
+    typealias UIViewType = WKWebView
+
+    func makeUIView(context: Context) -> UIViewType {
+        let appName = Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String ?? ""
         
         let webPrefs = WKWebpagePreferences()
         webPrefs.allowsContentJavaScript = true
@@ -17,6 +21,8 @@ struct WebView: UIViewRepresentable {
         webConfiguration.defaultWebpagePreferences = webPrefs
         webConfiguration.allowsInlineMediaPlayback = true
         webConfiguration.mediaTypesRequiringUserActionForPlayback = []
+        webConfiguration.preferences.isElementFullscreenEnabled = true
+        webConfiguration.applicationNameForUserAgent = "Mobile/\(appName)"
         
         // Inject webxr-polyfill.js
 //        if let path = Bundle.main.path(forResource: "webxr-polyfill", ofType: "js"),
@@ -24,7 +30,6 @@ struct WebView: UIViewRepresentable {
 //            let userScript = WKUserScript(source: webxrPolyfillScript, injectionTime: .atDocumentStart, forMainFrameOnly: true)
 //            webConfiguration.userContentController.addUserScript(userScript)
 //        }
-
         
         if let path = Bundle.main.path(forResource: "webxr2.0", ofType: "js"),
            let webxrPolyfillScript = try? String(contentsOfFile: path, encoding: .utf8) {
@@ -45,31 +50,28 @@ struct WebView: UIViewRepresentable {
         webView.allowsBackForwardNavigationGestures = true
         webView.isMultipleTouchEnabled = true
         webView.scrollView.contentInsetAdjustmentBehavior = .never
+        webView.scrollView.isScrollEnabled = true
         webView.navigationDelegate = context.coordinator
+        viewModel.webView = webView
+        load()
+        
+        // to react to entering/exiting fullscreen mode (observe changes of parent.viewModel.webView.fullscreenState)
+        webView.addObserver(fullscreenObserver, forKeyPath: "fullscreenState", options: .new, context: nil)
         
         return webView
     }
     
-    func updateUIView(_ uiView: WKWebView, context: Context) {
-        let request = URLRequest(url: url)
-        uiView.load(request)
-    }
+    func updateUIView(_ uiView: UIViewType, context: Context) {}
     
+    static func dismantleUIView(
+        _ uiView: Self.UIViewType,
+        coordinator: Self.Coordinator
+    ) {
+        uiView.removeObserver(FullscreenObserver(), forKeyPath: "fullscreenState")
+    }
+        
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
     }
-
-    class Coordinator: NSObject, WKNavigationDelegate, WKScriptMessageHandler {
-        var parent: WebView
-        
-        init(_ parent: WebView) {
-            self.parent = parent
-        }
-        
-        func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-            if message.name == "logHandler", let logMessage = message.body as? String {
-                print(logMessage)
-            }
-        }
-    }
+    
 }
