@@ -1,16 +1,15 @@
-// SPDX-FileCopyrightText: Copyright 2024 Reality Design Lab <dev@reality.design>
-// SPDX-FileContributor: Yuchen Zhang <yuchen@reality.design>
-// SPDX-License-Identifier: MIT
+//
+//  UIViewRepresentable.swift
+//  HoloWeb
+//
+//  Created by Alex on 08/12/2024.
+//
 
 import SwiftUI
 import WebKit
 
-struct WebView: UIViewRepresentable {
+extension WebView: UIViewRepresentable {
     typealias UIViewType = WKWebView
-    var viewModel = ViewModel()
-
-    static let shared = WebView()
-    private init() {}
 
     func makeUIView(context: Context) -> UIViewType {
         let appName = Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String ?? ""
@@ -31,7 +30,6 @@ struct WebView: UIViewRepresentable {
 //            let userScript = WKUserScript(source: webxrPolyfillScript, injectionTime: .atDocumentStart, forMainFrameOnly: true)
 //            webConfiguration.userContentController.addUserScript(userScript)
 //        }
-
         
         if let path = Bundle.main.path(forResource: "webxr2.0", ofType: "js"),
            let webxrPolyfillScript = try? String(contentsOfFile: path, encoding: .utf8) {
@@ -56,57 +54,24 @@ struct WebView: UIViewRepresentable {
         webView.navigationDelegate = context.coordinator
         viewModel.webView = webView
         load()
+        
+        // to react to entering/exiting fullscreen mode (observe changes of parent.viewModel.webView.fullscreenState)
+        webView.addObserver(fullscreenObserver, forKeyPath: "fullscreenState", options: .new, context: nil)
+        
         return webView
     }
     
-    func updateUIView(_ uiView: UIViewType, context: Context) {
-    }
+    func updateUIView(_ uiView: UIViewType, context: Context) {}
     
+    static func dismantleUIView(
+        _ uiView: Self.UIViewType,
+        coordinator: Self.Coordinator
+    ) {
+        uiView.removeObserver(FullscreenObserver(), forKeyPath: "fullscreenState")
+    }
+        
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
-    }
-
-    class Coordinator: NSObject, WKNavigationDelegate, WKScriptMessageHandler {
-        var parent: WebView
-        
-        init(_ parent: WebView) {
-            self.parent = parent
-        }
-        
-        func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation) {
-            parent.viewModel.urlString = webView.url?.absoluteString ?? ""
-        }
-
-        func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-            parent.viewModel.canGoBack = webView.canGoBack
-            parent.viewModel.canGoForward = webView.canGoForward
-        }
-
-        func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-            if message.name == "logHandler", let logMessage = message.body as? String {
-                print(logMessage)
-            }
-        }
-    }
-    
-    func load() {
-        guard let url = URL(string: viewModel.urlString) else {
-            return
-        }
-        viewModel.webView.load(URLRequest(url: url))
-    }
-        
-    func goBack() {
-        viewModel.webView.goBack()
-    }
-
-    func goForward() {
-        viewModel.webView.goForward()
-    }
-    
-    func goHome() {
-        viewModel.urlString = viewModel.homePage
-        load()
     }
     
 }

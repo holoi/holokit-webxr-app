@@ -67,7 +67,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		A75C1C2D2D01258A002EEC07 /* Models */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Models; sourceTree = "<group>"; };
 		A75C1C442D0269CC002EEC07 /* UI */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = UI; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -110,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				A75C1C442D0269CC002EEC07 /* UI */,
-				A75C1C2D2D01258A002EEC07 /* Models */,
 				4B1E355D2A7A21A9003EBC46 /* HoloWebApp.swift */,
 				4B8A782C2A7A410400EB4501 /* ARManager.swift */,
 				9602D08A2CE974A200F2820D /* HoloWebClipApp.swift */,
@@ -152,7 +150,6 @@
 				96A565702CE9726B0028AD43 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				A75C1C2D2D01258A002EEC07 /* Models */,
 				A75C1C442D0269CC002EEC07 /* UI */,
 			);
 			name = HoloWeb;
@@ -173,7 +170,6 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				A75C1C2D2D01258A002EEC07 /* Models */,
 				A75C1C442D0269CC002EEC07 /* UI */,
 			);
 			name = HoloWebClip;
